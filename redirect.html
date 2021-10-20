@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<div class="text-center" style="margin-top: 150px;">
+  <div class="spinner-border text-primary" style="width: 2.5rem; height: 2.5rem;" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+</body>
+	<script type="text/javascript">
+		let url=window.location.href;
+		var urlDetail = new URL(url);
+		var code = urlDetail.searchParams.get("code");
+		var state=urlDetail.searchParams.get("state");
+
+		if(code!=='' && code!=null && state!=='' && state!=null){
+			let newUrl=state+'?code='+code;
+			console.log(newUrl);
+			window.location.replace(newUrl);
+		}
+
+	</script>
+</html>
