@@ -22,7 +22,7 @@
 			var values = state.split(",");
 			let newUrl=values[0]+'?code='+code;
 			if(values.length==2){
-			    newUrl=newUrl+'?mode='+values[1];
+			    newUrl=newUrl+'&mode='+values[1];
 			}
 			console.log(newUrl);
 			window.location.replace(newUrl);
